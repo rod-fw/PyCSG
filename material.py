@@ -1,0 +1,4 @@
+class Material:
+    name : str
+
+
