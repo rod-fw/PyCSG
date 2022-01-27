@@ -1,15 +1,22 @@
-from material import Material
+import material
+import transform
 
 class Shape:
-    material : Material
+    name : str
+    vector : tuple
+    material : material.Material
+    translate : transform.Translate
 
-
+    def __init__(self,v):
+        self.vector = v
+        self.material = material.Default
+        self.translate = transform.Translate()
 
 class Cube(Shape):
-    pass
+    name = "cube"
 
 class Cylinder(Shape):
-    pass
+    name = "cylinder"
 
 class Sphere(Shape):
-    pass
+    name = "sphere"
