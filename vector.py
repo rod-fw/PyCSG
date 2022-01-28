@@ -1,1 +1,3 @@
-class Vector: pass
+#class Vector: pass
+def Vector(a):
+    return a
