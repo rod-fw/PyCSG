@@ -1,11 +1,11 @@
 from __future__ import annotations
 
-import material
+from . import material
 
-from shape import Shape, Cube,Cylinder,Sphere,Cone
-from transform import Translate
-from vector import Vector
-from operation import Union,Difference,Intersection
+from .shape import Shape, Cube,Cylinder,Sphere,Cone
+from .transform import Translate
+from .vector import Vector
+from .operation import Union,Difference,Intersection
 
 class Scene:
     shapes: list[Shape]
@@ -19,5 +19,7 @@ class Scene:
 
     def add(self,shape : Shape):
         self.shapes.append(shape)
+        return self
+        
     __iadd__ = add
     

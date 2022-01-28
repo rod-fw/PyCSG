@@ -1,11 +1,10 @@
-import material
-import transform
-from vector import Vector
+from . import material
+from . import vector
 
 class Shape:
     name : str
 
-
+from . import transform
 
 class Shape3d(Shape):
     vector : tuple
@@ -15,9 +14,10 @@ class Shape3d(Shape):
     __slots__ = tuple(__annotations__)
     
     def __init__(self,v):
-        self.vector = Vector(v)
+        self.vector = vector.Vector(v)
         self.material = material.Default
-        self.translate = transform.Translate()
+        self.translate = transform.Translate(self)
+
 class Cube(Shape3d):
     name = "cube"
 
