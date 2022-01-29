@@ -1,5 +1,6 @@
-from .shape import Shape
 from __future__ import annotations
+
+from .shape import Shape
 
 class Operation(Shape):
     shapes: list[Shape]
