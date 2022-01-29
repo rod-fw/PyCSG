@@ -9,6 +9,7 @@ class Generator:
 
     def start(self,scene,fp): pass
     def stop(self,scene,fp): pass
+    
     def sphere(self,scene,shape,fp): pass
     def cylinder(self,scene,shape,fp): pass
     def cone(self,scene,shape,fp): pass
