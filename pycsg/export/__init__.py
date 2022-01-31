@@ -6,6 +6,6 @@ def write(scene,path,protocol="openscad"):
     else:
         raise NotImplemented(protocol)
         
-    fp = open(path,"w")
+    fp = open(path + "." + generator.ext,"w")
     generator(scene,fp)
     fp.close()

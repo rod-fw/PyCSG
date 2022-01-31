@@ -1,5 +1,6 @@
 
 class Generator:
+    ext:str
     def __call__(self, scene, fp):
         self.start(scene,fp)
         for shape in scene.shapes:
@@ -13,4 +14,8 @@ class Generator:
     def sphere(self,scene,shape,fp): pass
     def cylinder(self,scene,shape,fp): pass
     def cone(self,scene,shape,fp): pass
-    def cube(self,scene,shape,fp): pass    
+    def cube(self,scene,shape,fp): pass
+
+    def union(self,scene,shape,fp): pass    
+    def difference(self,scene,shape,fp): pass    
+    def intersection(self,scene,shape,fp): pass    
