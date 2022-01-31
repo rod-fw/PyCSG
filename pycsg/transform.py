@@ -18,3 +18,6 @@ class Transformation:
 
 class Translate(Transformation) :
     pass
+
+class Rotate(Transformation) :
+    pass

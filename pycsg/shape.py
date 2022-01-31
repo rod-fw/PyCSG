@@ -10,6 +10,7 @@ class Shape3d(Shape):
     vector : tuple
     material : material.Material
     translate : transform.Translate
+    rotate : transform.Rotate
 
     __slots__ = tuple(__annotations__)
     
@@ -17,6 +18,7 @@ class Shape3d(Shape):
         self.vector = vector.Vector(v)
         self.material = m or material.Default
         self.translate = transform.Translate(self)
+        self.rotate = transform.Rotate(self)
 
 class Cube(Shape3d):
     name = "cube"

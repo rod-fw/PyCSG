@@ -5,8 +5,9 @@ class OpenSCAD(Generator):
     def _generic(self,scene,shape,fp):
         if shape.translate:
             fp.write(" translate([%s,%s,%s]) " % shape.translate.vector) 
-
-
+        if shape.rotate:
+            fp.write(" rotate([%s,%s,%s]) " % shape.rotate.vector) 
+            
     def start(self,scene,fp): pass
     def stop(self,scene,fp): pass
 
