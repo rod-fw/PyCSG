@@ -1,10 +1,14 @@
 
 class Generator:
     ext:str
+
+    def _shape(self,scene,shape,fp):
+        getattr(self,shape.name)(scene,shape,fp)
+
     def __call__(self, scene, fp):
         self.start(scene,fp)
         for shape in scene.shapes:
-            getattr(self,shape.name)(scene,shape,fp)
+            self._shape(scene,shape,fp)
         self.stop(scene,fp)
 
 

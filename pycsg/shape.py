@@ -13,9 +13,9 @@ class Shape3d(Shape):
 
     __slots__ = tuple(__annotations__)
     
-    def __init__(self,v):
+    def __init__(self,v,m=None):
         self.vector = vector.Vector(v)
-        self.material = material.Default
+        self.material = m or material.Default
         self.translate = transform.Translate(self)
 
 class Cube(Shape3d):

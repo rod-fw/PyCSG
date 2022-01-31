@@ -1,4 +1,5 @@
 from .shape import Shape
+from . import vector
 
 class Transformation:
     vector : tuple
@@ -6,10 +7,10 @@ class Transformation:
     __slots__ = tuple(__annotations__)
     def __init__(self,s,v=(0,0,0)):
         self.shape = s
-        self.vector = v
+        self.vector = vector.Vector(v)
 
     def __call__(self,v):
-        self.vector = v
+        self.vector = vector.Vector(v)
         return self.shape
 
     def __bool__(self):
