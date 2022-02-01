@@ -9,9 +9,6 @@ Bottom section payload cylinder	250	130
 Bottom section hemisphere	65	130
 x - below water	0	0
 x - below water	0	0
-Total	910	 
-
-
 """
 
 from pycsg import scene
