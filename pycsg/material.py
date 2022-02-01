@@ -7,4 +7,4 @@ class Material:
         self.name = name
         self.rgba = vector.Vector(rgba) if rgba else None
 
-Default = Material("yellow",rgba=(255,255,0,255))
+Default = Material("Yellow",rgba=(255,255,0,255))
