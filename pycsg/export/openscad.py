@@ -8,7 +8,10 @@ class OpenSCAD(Generator):
         if shape.rotate:
             fp.write(" rotate([%s,%s,%s]) " % shape.rotate.vector) 
             
-    def start(self,scene,fp): pass
+    def start(self,scene,fp):
+        for k,v in self.config.items():
+            fp.write("%s=%s;\n" % (k,v))
+            
     def stop(self,scene,fp): pass
 
     def sphere(self,scene,shape,fp):

@@ -44,5 +44,5 @@ s += scene.Union(
     scene.Sphere((lungo_r,))
 )
 import pycsg.export
-pycsg.export.write(s,"test")
+pycsg.export.write(s,"test",config=dict(fn=64))
  

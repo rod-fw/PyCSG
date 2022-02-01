@@ -1,7 +1,9 @@
 
 class Generator:
     ext:str
-
+    def __init__(self,config):
+        self.config = config or {}
+        
     def _shape(self,scene,shape,fp):
         getattr(self,shape.name)(scene,shape,fp)
 
