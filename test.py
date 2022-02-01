@@ -20,8 +20,8 @@ wing_t = 5
 wing_w = 130
 
 float_h   = 295
-wing_h    = 300
-payload_h = 250
+wing_h    = 250
+payload_h = 300
 payload_d = 120
 antenna_d = 30
 
