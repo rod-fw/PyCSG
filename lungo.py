@@ -43,6 +43,7 @@ s += scene.Union(
     scene.Cylinder((payload_h,lungo_r, lungo_r)),
     scene.Sphere((lungo_r,))
 )
+
 import pycsg.export
 pycsg.export.write(s,"test",config=dict(fn=64))
  
