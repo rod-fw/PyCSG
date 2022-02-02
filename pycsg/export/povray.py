@@ -32,9 +32,9 @@ class Povray(Generator):
             
     def start(self,scene,fp):
         fp.write("""#include "colors.inc"
-background { color Cyan }
+background { color Black }
   camera {
-    location <0, -20, -3>
+    location <0, -50, -3>
     look_at  <0, 0,  0>
   }\n""")
         # for k,v in self.config.items():
@@ -44,9 +44,13 @@ background { color Cyan }
         fp.write("light_source { <2, 4, -3> color White}\n")
 
     def sphere(self,scene,shape,fp):
-        """ [radius] """
+        """ [radius] 
+         sphere {
+    <Center>, Radius
+        """
+        fp.write(" sphere { <0,0,0>,  %s \n" % shape.vector[0])
         self._generic(scene,shape,fp)
-        fp.write(" sphere(r=%s);\n" % shape.vector[0])
+        fp.write("}\n")
 
     def cylinder(self,scene,shape,fp):
         """ [height, radius, radius]"""
