@@ -11,6 +11,16 @@ x - below water	0	0
 x - below water	0	0
 """
 
+IN_D  = 114
+OUT_D = 130
+WING_D = 40
+
+FLOAT_H   = 300
+WING_H    = 245
+PAYLOAD_H = 300
+
+PLATE = 20
+
 from pycsg import scene
  
 lungo_r = 65
@@ -19,9 +29,10 @@ wing_r  = wing_d/2
 wing_t = 5
 wing_w = 130
 
-float_h   = 295
-wing_h    = 250
+float_h   = 300
+wing_h    = 245
 payload_h = 300
+
 payload_d = 120
 antenna_d = 30
 
