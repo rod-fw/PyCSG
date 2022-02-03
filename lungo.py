@@ -11,15 +11,24 @@ x - below water	0	0
 x - below water	0	0
 """
 
-IN_D  = 114
+INR_D = 114
 OUT_D = 130
-WING_D = 40
 
-FLOAT_H   = 300
-WING_H    = 245
-PAYLOAD_H = 300
+FLT_H = 300
+PLD_H = 300
 
-PLATE = 20
+WNG_D = 40
+WNG_H = 245
+
+ANT_H = 25
+ANT_D = 18
+
+THIC_PLATE = 20
+THIN_PLATE = 10
+
+DC_H = 62
+DC_D = 33
+
 
 from pycsg import scene
  
