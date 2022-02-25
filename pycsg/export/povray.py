@@ -24,19 +24,14 @@ class Povray(Generator):
     def _generic(self,scene,shape,fp):
         if shape.translate:
             fp.write(" translate <%s,%s,%s> " % shape.translate.vector)
-        fp.write("""texture {
-                pigment { color %s }
-            }""" % shape.material.name) 
+        fp.write("""texture {  pigment { color %s } }""" % shape.material.name) 
         #if shape.rotate:
         #    fp.write(" rotate([%s,%s,%s]) " % shape.rotate.vector) 
             
     def start(self,scene,fp):
         fp.write("""#include "colors.inc"
-background { color Black }
-  camera {
-    location <0, -50, -3>
-    look_at  <0, 0,  0>
-  }\n""")
+        background { color Black }
+        camera {  location <0, -50, -3> look_at  <0, 0,  0> }\n""")
         # for k,v in self.config.items():
         #     fp.write("%s=%s;\n" % (k,v))
             
@@ -46,7 +41,7 @@ background { color Black }
     def sphere(self,scene,shape,fp):
         """ [radius] 
          sphere {
-    <Center>, Radius
+            <Center>, Radius
         """
         fp.write(" sphere { <0,0,0>,  %s \n" % shape.vector[0])
         self._generic(scene,shape,fp)
